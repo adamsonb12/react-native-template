@@ -1,6 +1,7 @@
 import * as React from "react";
-import { Text, View } from "react-native";
+import { View } from "react-native";
 import { useAuthContext } from "../../auth";
+
 import { PrimaryButton } from "../../components/@common/buttons/primary";
 
 export const WelcomeScreen = () => {

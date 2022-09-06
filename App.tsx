@@ -3,11 +3,11 @@ import { NavigationContainer } from "@react-navigation/native";
 import { Provider as PaperProvider } from "react-native-paper";
 
 import { AppNavigation } from "./src/navigation";
-import { AuthProvider, useAuthContext } from "./src/auth";
+import { AuthProvider } from "./src/auth";
 import { linkingConfiguration } from "./src/navigation/linking-configuration";
 import { theme } from "./src/components/@common/theme";
 
-export default function App({ navigation }) {
+export default function App() {
   // Connect to DB here
 
   return (

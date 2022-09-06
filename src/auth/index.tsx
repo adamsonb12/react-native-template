@@ -71,9 +71,9 @@ export const useAuthReducer = (authDefaults?: AuthState) => {
 };
 
 interface Context extends AuthState {
-  signIn: (data: any) => void;
-  signOut: (data: any) => void;
-  signUp: (data: any) => void;
+  signIn: (data: { username: string; password: string }) => void;
+  signOut: () => void;
+  signUp: (data: { username: string; password: string }) => void;
 }
 
 const AuthContext = createContext<Context>({
@@ -127,7 +127,7 @@ export const AuthProvider = ({ children }: { children: ReactNode }) => {
         dispatch({ type: "SIGN_IN", payload: { token: "dummy-auth-token" } });
       },
       signOut: () => dispatch({ type: "SIGN_OUT" }),
-      signUp: async (data) => {
+      signUp: async (data: { username: string; password: string }) => {
         // In a production app, we need to send user data to server and get a token
         // We will also need to handle errors if sign up failed
         // After getting token, we need to persist the token using `SecureStore`
