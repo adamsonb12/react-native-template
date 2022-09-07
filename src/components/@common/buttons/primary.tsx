@@ -17,14 +17,13 @@ export const PrimaryButton = ({
 
   return (
     <Button
+      style={{
+        backgroundColor: disabled ? colors.disabled : colors.primary,
+      }}
       mode={mode}
       onPress={onPress}
       disabled={disabled}
-      style={{
-        backgroundColor: disabled ? colors.disabled : colors.primary,
-        borderColor: disabled ? colors.disabled : colors.primary,
-      }}
-      labelStyle={colors.text}
+      textColor={colors.textLight}
       {...props}
     >
       {children}
