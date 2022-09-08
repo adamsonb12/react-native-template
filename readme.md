@@ -73,4 +73,4 @@ Now get to coding and building something great!
     }
 ```
 
-When using the project for realsies and you have a real URK for your apollo server to hit, remove the ApolloProvider custom component, and instead use the Apollo's Provider component directly in the App.tsx file.
+When using the project for realsies and you have a real url for your apollo server to hit, remove the ApolloProvider custom component, and instead use the Apollo's Provider component directly in the App.tsx file.
