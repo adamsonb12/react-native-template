@@ -1,4 +1,4 @@
-import { DefaultTheme } from "react-native-paper";
+import { DefaultTheme, configureFonts } from "react-native-paper";
 
 import * as customTheme from "./theme.json";
 
@@ -31,9 +31,69 @@ export const colors = {
   terciary: "#FFFC71",
 };
 
+// fonts
+export const fontConfig = {
+  web: {
+    regular: {
+      fontFamily: "Gordita-Regular",
+      fontWeight: "normal",
+    },
+    medium: {
+      fontFamily: "Gordita-Medium",
+      fontWeight: "normal",
+    },
+    light: {
+      fontFamily: "Gordita-Light",
+      fontWeight: "normal",
+    },
+    thin: {
+      fontFamily: "Gordita-Light",
+      fontWeight: "normal",
+    },
+  },
+  ios: {
+    regular: {
+      fontFamily: "Gordita-Regular",
+      fontWeight: "normal",
+    },
+    medium: {
+      fontFamily: "Gordita-Medium",
+      fontWeight: "normal",
+    },
+    light: {
+      fontFamily: "Gordita-Light",
+      fontWeight: "normal",
+    },
+    thin: {
+      fontFamily: "Gordita-Light",
+      fontWeight: "normal",
+    },
+  },
+  android: {
+    regular: {
+      fontFamily: "Gordita-Regular",
+      fontWeight: "normal",
+    },
+    medium: {
+      fontFamily: "Gordita-Medium",
+      fontWeight: "normal",
+    },
+    light: {
+      fontFamily: "Gordita-Light",
+      fontWeight: "normal",
+    },
+    thin: {
+      fontFamily: "Gordita-Light",
+      fontWeight: "normal",
+    },
+  },
+};
+
 export const theme = {
   ...DefaultTheme,
   colors,
+  // @ts-ignore
+  fonts: configureFonts(fontConfig),
   // additinal theme customizations
 };
 

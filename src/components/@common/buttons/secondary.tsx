@@ -22,6 +22,9 @@ export const SecondaryButton = ({
       }}
       disabled={disabled}
       textColor={colors.textLight}
+      labelStyle={{
+        fontFamily: "Gordita-Regular",
+      }}
       {...props}
     >
       {children}

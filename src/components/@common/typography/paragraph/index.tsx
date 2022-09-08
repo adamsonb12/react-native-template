@@ -1,5 +1,5 @@
 import { ReactNode } from "react";
-import { Text } from "react-native-paper";
+import { Text } from "../text";
 
 export const Paragraph = ({ children, ...props }: { children: ReactNode }) => {
   return (

@@ -1,5 +1,5 @@
 import React, { ReactNode } from "react";
-import { Button, useTheme } from "react-native-paper";
+import { Button, Text, useTheme } from "react-native-paper";
 
 export const PrimaryButton = ({
   onPress,
@@ -24,6 +24,9 @@ export const PrimaryButton = ({
       onPress={onPress}
       disabled={disabled}
       textColor={colors.textLight}
+      labelStyle={{
+        fontFamily: "Gordita-Regular",
+      }}
       {...props}
     >
       {children}
