@@ -29,6 +29,9 @@ export const colors = {
   notification: customTheme["color-warning-500"],
   secondary: "#6B10FF",
   terciary: "#FFFC71",
+  white: customWhite,
+  dark: customDark,
+  neutral: customNeutral,
 };
 
 // fonts
