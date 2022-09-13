@@ -14,7 +14,7 @@ export const ImageWrapper = styled(View)`
 `;
 
 export const ImageGradient = styled(LinearGradient).attrs({
-  colors: ["transparent", colors.white],
+  colors: ["transparent", colors.customWhite],
 })`
   position: absolute;
   width: 100%;
