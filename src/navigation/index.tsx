@@ -1,7 +1,7 @@
 import { createNativeStackNavigator } from "@react-navigation/native-stack";
 
 import { WelcomeScreen, HomeScreen } from "../screens";
-import { Splash } from "../components/loading/splash";
+import { Splash } from "../components/@common/loading/splash";
 
 import { useAuthContext } from "../auth";
 import {

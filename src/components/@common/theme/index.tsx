@@ -1,3 +1,4 @@
+import { Platform } from "react-native";
 import { DefaultTheme, configureFonts } from "react-native-paper";
 
 import * as customTheme from "./theme.json";
@@ -128,3 +129,12 @@ export const spacing224 = "224px";
 export const spacing256 = "256px";
 export const spacing288 = "288px";
 export const spacing320 = "320px";
+
+// ios : android/web
+export const fontSizeTitle = Platform.OS === "ios" ? "17px" : "20px";
+export const fontSizeParagraph = Platform.OS === "ios" ? "17px" : "16px";
+export const fontSizeSecondary = Platform.OS === "ios" ? "15px" : "14px";
+// tertiary is for labels, captions, etc
+export const fontSizeTertiary = Platform.OS === "ios" ? "13px" : "14px";
+// Tiny is for the AppBar and maybe some other but few use cases
+export const fontSizeTiny = Platform.OS === "ios" ? "10px" : "14px";

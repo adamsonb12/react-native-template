@@ -7,7 +7,7 @@ import { AppNavigation } from "./src/navigation";
 import { AuthProvider } from "./src/auth";
 import { linkingConfiguration } from "./src/navigation/linking-configuration";
 import { theme } from "./src/components/@common/theme";
-import { Splash } from "./src/components/loading/splash";
+import { Splash } from "./src/components/@common/loading/splash";
 import { ApolloProvider } from "./config/apollo";
 
 export default function App({ navigation }) {

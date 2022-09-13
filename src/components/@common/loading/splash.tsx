@@ -2,9 +2,9 @@ import React, { useRef } from "react";
 import styled from "styled-components/native";
 import LottieView from "lottie-react-native";
 
-import { ScreenView } from "../@common/layout";
+import { ScreenView } from "../layout";
 import { Platform } from "react-native";
-import { TitleLarge } from "../@common/typography/title";
+import { TitleLarge } from "../typography/title";
 
 const StyledScreenContainer = styled(ScreenView)`
   display: flex;
@@ -30,7 +30,7 @@ export const Splash = () => {
       <LottieView
         autoPlay
         ref={animation}
-        source={require("../../../assets/animations/loading.json")}
+        source={require("../../../../assets/animations/loading.json")}
       />
     </StyledScreenContainer>
   );
