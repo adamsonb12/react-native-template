@@ -18,6 +18,10 @@ export default function App({ navigation }) {
     "Gordita-Light": require("./assets/fonts/gordita-light.otf"),
     "Gordita-Medium": require("./assets/fonts/gordita-medium.otf"),
     "Gordita-Regular": require("./assets/fonts/gordita-regular.otf"),
+    "Gordita-Bold-Italic": require("./assets/fonts/gordita-bold-italic.otf"),
+    "Gordita-Light-Italic": require("./assets/fonts/gordita-light-italic.otf"),
+    "Gordita-Medium-Italic": require("./assets/fonts/gordita-medium-italic.otf"),
+    "Gordita-Regular-Italic": require("./assets/fonts/gordita-regular-italic.otf"),
   });
 
   if (!fontsLoaded) {
