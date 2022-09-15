@@ -15,6 +15,7 @@ export const FieldWrapper = styled(View)`
 export const ErrorLabel = styled(LabelSmall)`
   color: ${colors.danger};
   padding-left: ${spacing8};
+  text-align: center;
 `;
 
 export const StyledLabelLarge = styled(LabelLarge)`
