@@ -24,7 +24,9 @@ export const linkingConfiguration: LinkingOptions<RootStackParamList> = {
 
 // navigation types config
 declare global {
+  // eslint-disable-next-line @typescript-eslint/no-namespace
   namespace ReactNativation {
+    // eslint-disable-next-line @typescript-eslint/no-empty-interface
     interface RootParamList extends RootStackParamList {}
   }
 }

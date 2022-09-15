@@ -1,5 +1,5 @@
 import React, { ReactNode } from "react";
-import { Button, Text, useTheme } from "react-native-paper";
+import { Button, useTheme } from "react-native-paper";
 
 export const PrimaryButton = ({
   onPress,

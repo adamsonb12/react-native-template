@@ -105,7 +105,9 @@ export const theme = {
 export type ThemeOverride = typeof theme;
 
 declare global {
+  // eslint-disable-next-line @typescript-eslint/no-namespace
   namespace ReactNativePaper {
+    // eslint-disable-next-line @typescript-eslint/no-empty-interface
     interface Theme extends ThemeOverride {}
   }
 }
