@@ -32,6 +32,7 @@ export const Field = ({
   label,
   clarifier,
   errorMessage,
+  ...props
 }: {
   children: ReactNode;
   label?: string;
@@ -39,7 +40,7 @@ export const Field = ({
   errorMessage?: string;
 }) => {
   return (
-    <FieldWrapper>
+    <FieldWrapper {...props}>
       {label && <StyledLabelLarge>{label}</StyledLabelLarge>}
       {children}
       {clarifier && !errorMessage && (
