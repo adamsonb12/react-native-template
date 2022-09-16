@@ -9,6 +9,15 @@ import {
   RootStackParamList,
   UnauthenticatedParamList,
 } from "./linking-configuration";
+import { colors } from "../components/@common/theme";
+
+const headerStyle = {
+  backgroundColor: colors.background,
+};
+
+const headerTitleStyle = {
+  fontFamily: "Gordita-Bold",
+};
 
 const RootStack = createNativeStackNavigator<RootStackParamList>();
 
@@ -47,7 +56,14 @@ const UnauthenticatedStack =
 const UnauthenticatedRoot = () => {
   return (
     <UnauthenticatedStack.Navigator>
-      <UnauthenticatedStack.Screen name="Welcome" component={WelcomeScreen} />
+      <UnauthenticatedStack.Screen
+        name="Welcome"
+        component={WelcomeScreen}
+        options={{
+          headerStyle,
+          headerTitleStyle,
+        }}
+      />
     </UnauthenticatedStack.Navigator>
   );
 };
@@ -58,7 +74,14 @@ const AuthenticatedStack = createNativeStackNavigator<AuthenticatedParamList>();
 const AuthenticatedRoot = () => {
   return (
     <AuthenticatedStack.Navigator>
-      <AuthenticatedStack.Screen name="Home" component={HomeScreen} />
+      <AuthenticatedStack.Screen
+        name="Home"
+        component={HomeScreen}
+        options={{
+          headerStyle,
+          headerTitleStyle,
+        }}
+      />
     </AuthenticatedStack.Navigator>
   );
 };

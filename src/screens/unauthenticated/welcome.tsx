@@ -1,21 +1,21 @@
 import * as React from "react";
-import { View } from "react-native";
 import { useLocalizationContext } from "../../../localization";
 import { useAuthContext } from "../../auth";
 
 import { PrimaryButton } from "../../components/@common/buttons/primary";
+import { ScreenView } from "../../components/@common/layout";
 
 export const WelcomeScreen = () => {
   const { signIn } = useAuthContext();
-  const { localization } = useLocalizationContext();
+  const { getTranslation } = useLocalizationContext();
 
   return (
-    <View>
+    <ScreenView>
       <PrimaryButton
         onPress={() => signIn({ username: "user", password: "password" })}
       >
-        {localization.t("login")}
+        {getTranslation("login")}
       </PrimaryButton>
-    </View>
+    </ScreenView>
   );
 };

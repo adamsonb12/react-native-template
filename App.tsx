@@ -4,12 +4,12 @@ import { Provider as PaperProvider } from "react-native-paper";
 import { useFonts } from "expo-font";
 
 import { AppNavigation } from "./src/navigation";
+import { ApolloProvider } from "./config/apollo";
 import { AuthProvider } from "./src/auth";
 import { linkingConfiguration } from "./src/navigation/linking-configuration";
-import { theme } from "./src/components/@common/theme";
-import { Splash } from "./src/components/@common/loading/splash";
-import { ApolloProvider } from "./config/apollo";
 import { LocalizationProvider } from "./localization";
+import { Splash } from "./src/components/@common/loading/splash";
+import { theme } from "./src/components/@common/theme";
 
 export default function App({ navigation }) {
   // custom font

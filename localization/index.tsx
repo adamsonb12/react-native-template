@@ -3,13 +3,16 @@ import { I18n } from "i18n-js";
 import * as Localization from "expo-localization";
 
 import { translations } from "./translations";
+import { Translation } from "./translations/types";
 
 export interface LocalizationContext {
-  localization: I18n;
+  getTranslation: (key: keyof Translation) => string;
 }
 
 const LocalizationContext = createContext<LocalizationContext>({
-  localization: new I18n(translations),
+  getTranslation: (translationKey) => {
+    return translationKey;
+  },
 });
 
 export const LocalizationProvider = ({ children }: { children: ReactNode }) => {
@@ -19,7 +22,13 @@ export const LocalizationProvider = ({ children }: { children: ReactNode }) => {
   i18n.enableFallback = true;
 
   return (
-    <LocalizationContext.Provider value={{ localization: i18n }}>
+    <LocalizationContext.Provider
+      value={{
+        getTranslation: (key: keyof Translation) => {
+          return i18n.t(key);
+        },
+      }}
+    >
       {children}
     </LocalizationContext.Provider>
   );

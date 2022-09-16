@@ -1,5 +1,6 @@
 import React, { ReactNode } from "react";
 import { Button, useTheme } from "react-native-paper";
+import { fontConfig } from "../theme";
 
 export const SecondaryButton = ({
   onPress,
@@ -23,7 +24,7 @@ export const SecondaryButton = ({
       disabled={disabled}
       textColor={colors.textLight}
       labelStyle={{
-        fontFamily: "Gordita-Regular",
+        fontFamily: fontConfig.ios.regular.fontFamily,
         textTransform: "capitalize",
       }}
       {...props}

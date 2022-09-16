@@ -1,5 +1,6 @@
 import * as React from "react";
-import { View } from "react-native";
+
+import { ScreenView } from "../../components/@common/layout";
 
 import { useAuthContext } from "../../auth";
 import { DangerButton } from "../../components/@common/buttons/danger";
@@ -7,13 +8,13 @@ import { useLocalizationContext } from "../../../localization";
 
 export const HomeScreen = () => {
   const { signOut } = useAuthContext();
-  const { localization } = useLocalizationContext();
+  const { getTranslation } = useLocalizationContext();
 
   return (
-    <View>
+    <ScreenView>
       <DangerButton onPress={() => signOut()}>
-        {localization.t("logout")}
+        {getTranslation("logout")}
       </DangerButton>
-    </View>
+    </ScreenView>
   );
 };
