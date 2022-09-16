@@ -1,5 +1,14 @@
-import { TextInputProps } from "react-native-paper";
+import { TextInputProps as PaperTextInputProps } from "react-native-paper";
 import { Field, StyledTextInput } from "../field";
+
+export type TextInputProps = {
+  value: string;
+  onChange: (v: string) => void;
+  label?: string;
+  clarifier?: string;
+  errorMessage?: string;
+  placeholder?: string;
+} & Partial<Omit<PaperTextInputProps, "onChange">>
 
 export const TextInput = ({
   value,
@@ -9,14 +18,7 @@ export const TextInput = ({
   errorMessage,
   placeholder,
   ...props
-}: {
-  value: string;
-  onChange: (v: string) => void;
-  label?: string;
-  clarifier?: string;
-  errorMessage?: string;
-  placeholder?: string;
-} & Partial<TextInputProps>) => {
+}: TextInputProps) => {
   return (
     <Field label={label} clarifier={clarifier} errorMessage={errorMessage}>
       <StyledTextInput
