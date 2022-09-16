@@ -24,6 +24,7 @@ export const SecondaryButton = ({
       textColor={colors.textLight}
       labelStyle={{
         fontFamily: "Gordita-Regular",
+        textTransform: "capitalize",
       }}
       {...props}
     >

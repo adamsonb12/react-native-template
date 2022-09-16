@@ -9,6 +9,7 @@ import { linkingConfiguration } from "./src/navigation/linking-configuration";
 import { theme } from "./src/components/@common/theme";
 import { Splash } from "./src/components/@common/loading/splash";
 import { ApolloProvider } from "./config/apollo";
+import { LocalizationProvider } from "./localization";
 
 export default function App({ navigation }) {
   // custom font
@@ -33,10 +34,12 @@ export default function App({ navigation }) {
     <PaperProvider theme={theme}>
       <AuthProvider>
         <ApolloProvider>
-          <NavigationContainer linking={linkingConfiguration}>
-            {/* Actual App */}
-            <AppNavigation />
-          </NavigationContainer>
+          <LocalizationProvider>
+            <NavigationContainer linking={linkingConfiguration}>
+              {/* Actual App */}
+              <AppNavigation />
+            </NavigationContainer>
+          </LocalizationProvider>
         </ApolloProvider>
       </AuthProvider>
     </PaperProvider>

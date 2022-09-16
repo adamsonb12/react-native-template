@@ -26,6 +26,7 @@ export const PrimaryButton = ({
       textColor={colors.textLight}
       labelStyle={{
         fontFamily: "Gordita-Regular",
+        textTransform: "capitalize",
       }}
       {...props}
     >
