@@ -7,12 +7,14 @@ import { Translation } from "./translations/types";
 
 export interface LocalizationContext {
   getTranslation: (key: keyof Translation) => string;
+  locale: string;
 }
 
 const LocalizationContext = createContext<LocalizationContext>({
   getTranslation: (translationKey) => {
     return translationKey;
   },
+  locale: "en",
 });
 
 export const LocalizationProvider = ({ children }: { children: ReactNode }) => {
@@ -27,6 +29,7 @@ export const LocalizationProvider = ({ children }: { children: ReactNode }) => {
         getTranslation: (key: keyof Translation) => {
           return i18n.t(key);
         },
+        locale: i18n.locale,
       }}
     >
       {children}
