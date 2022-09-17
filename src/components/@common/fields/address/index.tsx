@@ -31,6 +31,12 @@ export const AddressInput = ({
           key: GOOGLE_PLACES_API_KEY,
           language: locale,
         }}
+        styles={{
+          textInput: {
+            borderColor: "#67869e",
+            borderWidth: "1px",
+          },
+        }}
       />
     </StyledField>
   );
